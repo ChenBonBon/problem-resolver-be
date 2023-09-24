@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS user_codes (
+    id SERIAL NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    code VARCHAR(16) NOT NULL,
+    status VARCHAR(16) NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    expired_at TIMESTAMPTZ NOT NULL,
+    updated_at TIMESTAMPTZ,
+    PRIMARY KEY (id)
+);
